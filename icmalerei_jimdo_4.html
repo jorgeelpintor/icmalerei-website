@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IC Malerei – Jorge Carraminana & Annika Imhof</title>
+<meta name="description" content="IC Malerei – Professionelle Malerarbeiten in Hinwil und Umgebung. Innen- und Aussenanstrich, Farbkonzepte, Gipserarbeiten. Kostenlose Offerte anfragen.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<!-- Tabler Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+/* ============================================================
+   IC MALEREI – JIMDO CUSTOM HTML
+   Einfach in Jimdo unter: Inhalt > HTML/CSS einfügen
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream:        #F5F2EC;
+  --warm-white:   #FAFAF7;
+  --charcoal:     #1C1C1A;
+  --mid:          #5C5B57;
+  --accent:       #8B6F47;
+  --accent-light: #D4B896;
+  --gold:         #B8953F;
+  --border:       rgba(92,91,87,0.15);
+  --border-strong:rgba(92,91,87,0.30);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── NAVIGATION ───────────────────────────────────── */
+.icm-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 4rem;
+  background: rgba(250,250,247,0.93);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+  transition: padding 0.3s;
+}
+
+.icm-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.icm-logo span { color: var(--accent); }
+
+.icm-nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.icm-nav-links a {
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.icm-nav-links a:hover { color: var(--charcoal); }
+
+.icm-nav-cta {
+  font-size: 11.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: var(--warm-white);
+  background: var(--charcoal);
+  border: none;
+  padding: 0.75rem 1.7rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.icm-nav-cta:hover { background: var(--accent); }
+
+/* ── HERO ─────────────────────────────────────────── */
+.icm-hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 74px;
+}
+
+.icm-hero-left {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem 5rem 5rem;
+}
+
+.icm-tag {
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.icm-tag::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 0.5px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.icm-hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.07;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+}
+.icm-hero-h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.icm-hero-sub {
+  font-size: 15px;
+  color: var(--mid);
+  max-width: 390px;
+  line-height: 1.85;
+  margin-bottom: 3rem;
+}
+
+.icm-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icm-btn-primary {
+  font-size: 11.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background: var(--charcoal);
+  color: var(--warm-white);
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.icm-btn-primary:hover { background: var(--accent); }
+
+.icm-btn-ghost {
+  font-size: 11.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background: transparent;
+  color: var(--charcoal);
+  border: 0.5px solid var(--border-strong);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.icm-btn-ghost:hover { border-color: var(--charcoal); }
+
+.icm-hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid var(--border);
+}
+.icm-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.icm-stat-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 5px;
+}
+
+.icm-hero-right {
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+  min-height: 500px;
+}
+.icm-hero-right canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.icm-hero-quote {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  text-align: right;
+}
+.icm-hero-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* ── SECTION DEFAULTS ─────────────────────────────── */
+.icm-section { padding: 7rem 5rem; }
+.icm-section-dark { background: var(--charcoal); }
+.icm-section-cream { background: var(--cream); }
+
+.icm-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.icm-section-title em { font-style: italic; color: var(--accent); }
+.icm-section-dark .icm-section-title { color: var(--warm-white); }
+
+.icm-section-body {
+  font-size: 15px;
+  color: var(--mid);
+  line-height: 1.9;
+  max-width: 560px;
+}
+.icm-section-dark .icm-section-body { color: rgba(250,250,247,0.6); }
+
+/* ── LEISTUNGEN ───────────────────────────────────── */
+.icm-leistungen-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: end;
+}
+
+.icm-leistungen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+}
+
+.icm-card {
+  background: var(--warm-white);
+  padding: 3rem 2.5rem;
+  transition: background 0.3s;
+  cursor: default;
+}
+.icm-card:hover { background: var(--charcoal); }
+
+.icm-card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: block;
+  transition: color 0.3s;
+}
+.icm-card:hover .icm-card-num { color: rgba(212,184,150,0.7); }
+
+.icm-card-icon {
+  font-size: 28px;
+  color: var(--charcoal);
+  margin-bottom: 1.4rem;
+  display: block;
+  transition: color 0.3s;
+}
+.icm-card:hover .icm-card-icon { color: var(--accent-light); }
+
+.icm-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.8rem;
+  transition: color 0.3s;
+}
+.icm-card:hover .icm-card-title { color: var(--warm-white); }
+
+.icm-card-text {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.85;
+  transition: color 0.3s;
+}
+.icm-card:hover .icm-card-text { color: rgba(250,250,247,0.65); }
+
+/* ── ABOUT ────────────────────────────────────────── */
+.icm-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+}
+
+.icm-about-visual {
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+}
+.icm-about-visual canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.icm-about-badge {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  background: var(--accent);
+  color: white;
+  padding: 1.1rem 2rem;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.icm-about-content {
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--warm-white);
+}
+
+.icm-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.5;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent);
+}
+
+.icm-team {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.icm-team-member {
+  padding-top: 1.4rem;
+  border-top: 0.5px solid var(--border);
+}
+.icm-team-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+.icm-team-role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+/* ── PROZESS ──────────────────────────────────────── */
+.icm-prozess-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 5rem;
+  border-top: 0.5px solid rgba(255,255,255,0.1);
+}
+.icm-prozess-step {
+  padding: 3rem 2.5rem 3rem 0;
+  border-right: 0.5px solid rgba(255,255,255,0.1);
+}
+.icm-prozess-step:last-child { border-right: none; padding-right: 0; }
+.icm-prozess-step:not(:first-child) { padding-left: 2.5rem; }
+
+.icm-prozess-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.07);
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.icm-prozess-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--warm-white);
+  margin-bottom: 0.7rem;
+}
+.icm-prozess-text {
+  font-size: 13px;
+  color: rgba(250,250,247,0.5);
+  line-height: 1.85;
+}
+
+/* ── GALERIE ──────────────────────────────────────── */
+.icm-galerie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+.icm-galerie-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 1.5px;
+  background: var(--border);
+}
+.icm-gal-item {
+  position: relative;
+  overflow: hidden;
+}
+.icm-gal-item:first-child { grid-row: 1 / 3; }
+.icm-gal-item canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.icm-gal-item:hover canvas { transform: scale(1.04); }
+.icm-gal-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.4rem;
+  background: linear-gradient(to top, rgba(28,28,26,0.82) 0%, transparent 100%);
+  font-size: 11.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.icm-gal-item:hover .icm-gal-label { opacity: 1; }
+
+/* ── OFFERTE ──────────────────────────────────────── */
+.icm-offerte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 7rem 5rem;
+  background: var(--warm-white);
+}
+
+.icm-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.icm-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 13.5px;
+  color: var(--mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.icm-contact-link:hover { color: var(--accent); }
+.icm-contact-link i { color: var(--accent); font-size: 17px; }
+
+.icm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.icm-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.icm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.icm-form-label {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.icm-input, .icm-select, .icm-textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--charcoal);
+  background: var(--cream);
+  border: 0.5px solid var(--border-strong);
+  padding: 0.85rem 1rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.icm-input:focus,
+.icm-textarea:focus { border-color: var(--accent); }
+.icm-select { appearance: none; cursor: pointer; }
+.icm-textarea { resize: vertical; min-height: 120px; }
+
+.icm-form-submit {
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background: var(--charcoal);
+  color: var(--warm-white);
+  border: none;
+  padding: 1.1rem 2.5rem;
+  cursor: pointer;
+  transition: background 0.25s;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+.icm-form-submit:hover { background: var(--accent); }
+
+.icm-free-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #EAF3DE;
+  color: #3B6D11;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ── FOOTER / KONTAKT-BAR ─────────────────────────── */
+.icm-kontakt-bar {
+  background: var(--charcoal);
+  padding: 2.4rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.icm-kontakt-row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.icm-kontakt-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 13px;
+  color: rgba(250,250,247,0.65);
+  text-decoration: none;
+}
+.icm-kontakt-item i { color: var(--accent-light); font-size: 16px; }
+
+.icm-footer {
+  background: #141412;
+  padding: 2.8rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.icm-footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(250,250,247,0.9);
+}
+.icm-footer-logo span { color: var(--accent-light); }
+.icm-footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.icm-footer-links a {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(250,250,247,0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.icm-footer-links a:hover { color: var(--accent-light); }
+.icm-footer-copy {
+  font-size: 11px;
+  color: rgba(250,250,247,0.28);
+}
+
+/* ── SCROLL REVEAL ────────────────────────────────── */
+.icm-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.icm-reveal.icm-visible { opacity: 1; transform: none; }
+.icm-delay-1 { transition-delay: 0.1s; }
+.icm-delay-2 { transition-delay: 0.2s; }
+.icm-delay-3 { transition-delay: 0.35s; }
+.icm-delay-4 { transition-delay: 0.5s; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 900px) {
+  .icm-nav { padding: 1.2rem 1.5rem; }
+  .icm-nav-links { display: none; }
+  .icm-hero { grid-template-columns: 1fr; }
+  .icm-hero-right { min-height: 300px; }
+  .icm-hero-left { padding: 3rem 1.5rem; }
+  .icm-section { padding: 4rem 1.5rem; }
+  .icm-leistungen-header { grid-template-columns: 1fr; }
+  .icm-leistungen-grid { grid-template-columns: 1fr; }
+  .icm-about { grid-template-columns: 1fr; }
+  .icm-about-visual { min-height: 280px; }
+  .icm-about-content { padding: 3rem 1.5rem; }
+  .icm-prozess-steps { grid-template-columns: 1fr 1fr; }
+  .icm-galerie-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .icm-gal-item:first-child { grid-row: auto; grid-column: 1 / -1; height: 250px; }
+  .icm-offerte { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+  .icm-kontakt-bar { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .icm-footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1.5rem; }
+  .icm-hero-stats { gap: 1.5rem; }
+  .icm-form-row { grid-template-columns: 1fr; }
+  .icm-team { flex-direction: column; gap: 1.5rem; }
+  .icm-galerie-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .icm-prozess-step { padding: 2rem 1rem 2rem 0; }
+  .icm-prozess-step:not(:first-child) { padding-left: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="icm-nav">
+  <a class="icm-logo" href="#"><span>IC</span> Malerei</a>
+  <ul class="icm-nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#ueber-uns">Über uns</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="#offerte">Offerte</a></li>
+  </ul>
+  <button class="icm-nav-cta" onclick="document.getElementById('offerte').scrollIntoView({behavior:'smooth'})">Kostenlose Offerte</button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="icm-hero">
+  <!-- Links: Text -->
+  <div class="icm-hero-left">
+    <div class="icm-tag">Malerhandwerk · Hinwil, Zürich</div>
+    <h1 class="icm-hero-h1">Räume<br>die <em>begeistern</em></h1>
+    <p class="icm-hero-sub">Wir sind Jorge &amp; Annika — ein junges, engagiertes Duo mit Leidenschaft für kreative und individuelle Malerei-Lösungen für Ihr Zuhause.</p>
+    <div class="icm-hero-actions">
+      <button class="icm-btn-primary" onclick="document.getElementById('offerte').scrollIntoView({behavior:'smooth'})">Offerte anfragen</button>
+      <button class="icm-btn-ghost" onclick="document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">Galerie ansehen</button>
+    </div>
+    <div class="icm-hero-stats">
+      <div>
+        <div class="icm-stat-num">100%</div>
+        <div class="icm-stat-label">Kostenlose Offerte</div>
+      </div>
+      <div>
+        <div class="icm-stat-num">2</div>
+        <div class="icm-stat-label">Erfahrene Maler</div>
+      </div>
+      <div>
+        <div class="icm-stat-num">∞</div>
+        <div class="icm-stat-label">Farbmöglichkeiten</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rechts: Visuell -->
+  <div class="icm-hero-right">
+    <canvas id="icm-hero-canvas"></canvas>
+    <div class="icm-hero-quote">
+      <p>«Farbe ist das<br>Lächeln der Natur.»</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     LEISTUNGEN
+═══════════════════════════════════════ -->
+<section class="icm-section icm-section-cream" id="leistungen">
+  <div class="icm-leistungen-header">
+    <div class="icm-reveal">
+      <div class="icm-tag">Was wir anbieten</div>
+      <h2 class="icm-section-title">Unser <em>Leistungsportfolio</em></h2>
+    </div>
+    <div class="icm-reveal icm-delay-1">
+      <p class="icm-section-body">Von klassischer Raumgestaltung bis zu individuellen Farbkonzepten — wir bringen Ihre Wünsche mit Handwerkskunst und Kreativität zum Leben.</p>
+    </div>
+  </div>
+
+  <div class="icm-leistungen-grid">
+    <div class="icm-card icm-reveal">
+      <span class="icm-card-num">01</span>
+      <i class="ti ti-home-2 icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Innenanstrich</div>
+      <p class="icm-card-text">Professionelle Malerarbeiten für Wohnräume, Büros und Gewerbeimmobilien. Präzise Ausführung und saubere Kanten garantiert.</p>
+    </div>
+    <div class="icm-card icm-reveal icm-delay-1">
+      <span class="icm-card-num">02</span>
+      <i class="ti ti-building icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Aussenanstrich</div>
+      <p class="icm-card-text">Fassaden und Aussenflächen mit witterungsbeständigen Farben. Langlebiger Schutz und repräsentatives Erscheinungsbild.</p>
+    </div>
+    <div class="icm-card icm-reveal icm-delay-2">
+      <span class="icm-card-num">03</span>
+      <i class="ti ti-palette icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Farbkonzepte</div>
+      <p class="icm-card-text">Individuelle Farbberatung inklusive. Wir entwickeln Konzepte, die zu Ihrem Stil, Ihrem Licht und Ihrer Raumstruktur passen.</p>
+    </div>
+    <div class="icm-card icm-reveal icm-delay-1">
+      <span class="icm-card-num">04</span>
+      <i class="ti ti-texture icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Gipserarbeiten</div>
+      <p class="icm-card-text">Kleinere Gipserarbeiten und Wandreparaturen als Ergänzung zu unseren Malerleistungen — alles aus einer Hand.</p>
+    </div>
+    <div class="icm-card icm-reveal icm-delay-2">
+      <span class="icm-card-num">05</span>
+      <i class="ti ti-sparkles icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Dekorative Techniken</div>
+      <p class="icm-card-text">Kreative Gestaltungstechniken wie Marmorierungen, Lasuren oder Strukturputze für besondere Akzente in Ihrem Raum.</p>
+    </div>
+    <div class="icm-card icm-reveal icm-delay-3">
+      <span class="icm-card-num">06</span>
+      <i class="ti ti-clipboard-check icm-card-icon" aria-hidden="true"></i>
+      <div class="icm-card-title">Gratis Beratung</div>
+      <p class="icm-card-text">Kostenlose Offerten und Beratungen direkt vor Ort. Unverbindlich, transparent und ohne versteckte Kosten.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ÜBER UNS
+═══════════════════════════════════════ -->
+<div class="icm-about" id="ueber-uns">
+  <div class="icm-about-visual">
+    <canvas id="icm-about-canvas"></canvas>
+    <div class="icm-about-badge">Jorge &amp; Annika</div>
+  </div>
+  <div class="icm-about-content">
+    <div class="icm-tag icm-reveal">Über uns</div>
+    <h2 class="icm-section-title icm-reveal icm-delay-1">Leidenschaft<br>trifft <em>Präzision</em></h2>
+    <blockquote class="icm-quote icm-reveal icm-delay-2">
+      «Wir begeistern unsere Kunden durch kreative und individuelle Lösungen — mit Hingabe für jedes Detail.»
+    </blockquote>
+    <p class="icm-section-body icm-reveal icm-delay-2">Als junges, engagiertes Duo aus Hinwil haben wir uns ganz der Gestaltung von Wohnräumen verschrieben. Jedes Projekt behandeln wir wie unser eigenes Zuhause — mit Sorgfalt, Kreativität und einem Auge für Ästhetik.</p>
+    <div class="icm-team icm-reveal icm-delay-3">
+      <div class="icm-team-member">
+        <div class="icm-team-name">Jorge Carraminana</div>
+        <div class="icm-team-role">Maler &amp; Mitgründer</div>
+      </div>
+      <div class="icm-team-member">
+        <div class="icm-team-name">Annika Imhof</div>
+        <div class="icm-team-role">Malerin &amp; Mitgründerin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PROZESS
+═══════════════════════════════════════ -->
+<section class="icm-section icm-section-dark">
+  <div class="icm-tag icm-reveal" style="color: var(--accent-light);">Wie wir arbeiten</div>
+  <h2 class="icm-section-title icm-reveal icm-delay-1">Unser <em>Prozess</em></h2>
+  <div class="icm-prozess-steps">
+    <div class="icm-prozess-step icm-reveal">
+      <div class="icm-prozess-num">01</div>
+      <div class="icm-prozess-title">Beratung</div>
+      <p class="icm-prozess-text">Kostenlose Besichtigung vor Ort. Wir hören zu, verstehen Ihre Wünsche und analysieren die Gegebenheiten.</p>
+    </div>
+    <div class="icm-prozess-step icm-reveal icm-delay-1">
+      <div class="icm-prozess-num">02</div>
+      <div class="icm-prozess-title">Farbkonzept</div>
+      <p class="icm-prozess-text">Wir erarbeiten ein individuelles Farbkonzept — abgestimmt auf Ihr Interieur, Ihr Licht und Ihren Stil.</p>
+    </div>
+    <div class="icm-prozess-step icm-reveal icm-delay-2">
+      <div class="icm-prozess-num">03</div>
+      <div class="icm-prozess-title">Ausführung</div>
+      <p class="icm-prozess-text">Professionelle Umsetzung mit hochwertigen Materialien, pünktlich und sauber — mit minimalem Aufwand für Sie.</p>
+    </div>
+    <div class="icm-prozess-step icm-reveal icm-delay-3">
+      <div class="icm-prozess-num">04</div>
+      <div class="icm-prozess-title">Übergabe</div>
+      <p class="icm-prozess-text">Gemeinsame Abnahme, finale Kontrolle und Übergabe Ihres frisch gestalteten Raumes — zu Ihrer vollsten Zufriedenheit.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     GALERIE
+═══════════════════════════════════════ -->
+<section class="icm-section icm-section-cream" id="galerie">
+  <div class="icm-galerie-header">
+    <div>
+      <div class="icm-tag icm-reveal">Unsere Arbeiten</div>
+      <h2 class="icm-section-title icm-reveal icm-delay-1">Galerie &amp; <em>Projekte</em></h2>
+    </div>
+    <button class="icm-btn-ghost icm-reveal" style="align-self:flex-end">Alle Projekte →</button>
+  </div>
+
+  <div class="icm-galerie-grid icm-reveal">
+    <div class="icm-gal-item">
+      <canvas id="icm-gal1" width="800" height="560"></canvas>
+      <div class="icm-gal-label">Wohnzimmer · Innenanstrich</div>
+    </div>
+    <div class="icm-gal-item">
+      <canvas id="icm-gal2" width="400" height="280"></canvas>
+      <div class="icm-gal-label">Schlafzimmer · Farbkonzept</div>
+    </div>
+    <div class="icm-gal-item">
+      <canvas id="icm-gal3" width="400" height="280"></canvas>
+      <div class="icm-gal-label">Fassade · Aussenanstrich</div>
+    </div>
+    <div class="icm-gal-item">
+      <canvas id="icm-gal4" width="400" height="280"></canvas>
+      <div class="icm-gal-label">Küche · Dekorative Technik</div>
+    </div>
+    <div class="icm-gal-item">
+      <canvas id="icm-gal5" width="400" height="280"></canvas>
+      <div class="icm-gal-label">Büro · Innenanstrich</div>
+    </div>
+  </div>
+  <!-- ⚠️ HINWEIS: Ersetzen Sie die Canvas-Elemente durch echte <img>-Tags mit Ihren Fotos:
+       <div class="icm-gal-item">
+         <img src="IHR-BILD.jpg" alt="Wohnzimmer Innenanstrich" style="width:100%;height:100%;object-fit:cover;">
+         <div class="icm-gal-label">Wohnzimmer · Innenanstrich</div>
+       </div>
+  -->
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     OFFERTE
+═══════════════════════════════════════ -->
+<div class="icm-offerte" id="offerte">
+  <div>
+    <div class="icm-tag icm-reveal">Kostenloses Angebot</div>
+    <h2 class="icm-section-title icm-reveal icm-delay-1">Ihre Offerte —<br><em>unverbindlich &amp; gratis</em></h2>
+    <p class="icm-section-body icm-reveal icm-delay-2">Kontaktieren Sie uns für eine kostenlose Beratung und Offerte. Wir besuchen Sie vor Ort, schauen uns Ihr Projekt an und erstellen Ihnen innert kürzester Zeit ein transparentes Angebot.</p>
+    <div class="icm-contact-list icm-reveal icm-delay-3">
+      <a class="icm-contact-link" href="tel:0799399188">
+        <i class="ti ti-phone" aria-hidden="true"></i>079 939 91 88
+      </a>
+      <a class="icm-contact-link" href="mailto:info@icmalerei.ch">
+        <i class="ti ti-mail" aria-hidden="true"></i>info@icmalerei.ch
+      </a>
+      <span class="icm-contact-link">
+        <i class="ti ti-map-pin" aria-hidden="true"></i>Neueggstrasse 2, 8340 Hinwil
+      </span>
+    </div>
+  </div>
+
+  <div class="icm-reveal icm-delay-1">
+    <form class="icm-form" id="icm-offerte-form" action="https://formspree.io/f/xzdokapq" method="POST">
+      <div class="icm-form-row">
+        <div class="icm-form-group">
+          <label class="icm-form-label">Vorname</label>
+          <input class="icm-input" type="text" name="vorname" placeholder="Max" required>
+        </div>
+        <div class="icm-form-group">
+          <label class="icm-form-label">Nachname</label>
+          <input class="icm-input" type="text" name="nachname" placeholder="Muster" required>
+        </div>
+      </div>
+      <div class="icm-form-group">
+        <label class="icm-form-label">E-Mail</label>
+        <input class="icm-input" type="email" name="email" placeholder="max@beispiel.ch" required>
+      </div>
+      <div class="icm-form-group">
+        <label class="icm-form-label">Telefon</label>
+        <input class="icm-input" type="tel" name="telefon" placeholder="079 000 00 00">
+      </div>
+      <div class="icm-form-group">
+        <label class="icm-form-label">Leistung</label>
+        <select class="icm-select" name="leistung">
+          <option>Innenanstrich</option>
+          <option>Aussenanstrich</option>
+          <option>Farbkonzept &amp; Beratung</option>
+          <option>Gipserarbeiten</option>
+          <option>Dekorative Techniken</option>
+          <option>Mehrere Leistungen</option>
+        </select>
+      </div>
+      <div class="icm-form-group">
+        <label class="icm-form-label">Ihre Nachricht</label>
+        <textarea class="icm-textarea" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Neue Offerte-Anfrage – IC Malerei">
+      <input type="hidden" name="_language" value="de">
+      <button type="submit" class="icm-form-submit" id="icm-submit-btn">Offerte anfragen →</button>
+      <div class="icm-free-badge">
+        <i class="ti ti-check" style="font-size:14px" aria-hidden="true"></i>
+        Kostenlos &amp; unverbindlich
+      </div>
+      <div id="icm-form-success" style="display:none; margin-top:1rem; background:#EAF3DE; border-left:3px solid #3B6D11; padding:1rem 1.2rem; font-size:14px; color:#3B6D11;">
+        <strong>Vielen Dank!</strong> Ihre Anfrage wurde gesendet. Wir melden uns so schnell wie möglich.
+      </div>
+      <div id="icm-form-error" style="display:none; margin-top:1rem; background:#FCEBEB; border-left:3px solid #E24B4A; padding:1rem 1.2rem; font-size:14px; color:#A32D2D;">
+        <strong>Fehler.</strong> Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@icmalerei.ch
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     KONTAKT-BAR
+═══════════════════════════════════════ -->
+<div class="icm-kontakt-bar">
+  <div class="icm-kontakt-row">
+    <a class="icm-kontakt-item" href="tel:0799399188">
+      <i class="ti ti-phone" aria-hidden="true"></i>079 939 91 88
+    </a>
+    <a class="icm-kontakt-item" href="mailto:info@icmalerei.ch">
+      <i class="ti ti-mail" aria-hidden="true"></i>info@icmalerei.ch
+    </a>
+    <span class="icm-kontakt-item">
+      <i class="ti ti-map-pin" aria-hidden="true"></i>Hinwil, 8340 Zürich
+    </span>
+  </div>
+  <button class="icm-btn-primary" onclick="document.getElementById('offerte').scrollIntoView({behavior:'smooth'})">Jetzt kontaktieren</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="icm-footer">
+  <div class="icm-footer-logo"><span>IC</span> Malerei</div>
+  <ul class="icm-footer-links">
+    <li><a href="#">Impressum</a></li>
+    <li><a href="#">Datenschutz</a></li>
+    <li><a href="#">AGB</a></li>
+  </ul>
+  <p class="icm-footer-copy">© 2025 IC Malerei – Jorge Carraminana &amp; Annika Imhof</p>
+</footer>
+
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════ -->
+<script>
+/* ── Canvas: Hero ── */
+function icmDrawHero(canvas) {
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width = canvas.offsetWidth || 800;
+  const H = canvas.height = canvas.offsetHeight || 700;
+  ctx.fillStyle = '#1C1C1A';
+  ctx.fillRect(0, 0, W, H);
+  const cols = ['#8B6F47','#B8953F','#D4B896','#5C5B57','#6a5a44'];
+  for (let i = 0; i < 20; i++) {
+    const x = Math.random() * W, y = Math.random() * H, r = 80 + Math.random() * 220;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, cols[Math.floor(Math.random() * cols.length)] + '28');
+    g.addColorStop(1, 'transparent');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  }
+  for (let i = 0; i < 35; i++) {
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(184,149,63,0.05)';
+    ctx.lineWidth = 0.8;
+    const x1 = Math.random() * W, y1 = Math.random() * H;
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 + (Math.random() - 0.5) * 350, y1 + (Math.random() - 0.5) * 350);
+    ctx.stroke();
+  }
+}
+
+/* ── Canvas: About ── */
+function icmDrawAbout(canvas) {
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width = canvas.offsetWidth || 600;
+  const H = canvas.height = canvas.offsetHeight || 700;
+  ctx.fillStyle = '#141412';
+  ctx.fillRect(0, 0, W, H);
+  const brushCols = ['#8B6F47','#B8953F','#D4B896','#5C5B57'];
+  for (let b = 0; b < 14; b++) {
+    const bx = Math.random() * W, by = Math.random() * H;
+    const bw = 40 + Math.random() * 140, bh = 5 + Math.random() * 18;
+    ctx.save();
+    ctx.translate(bx, by);
+    ctx.rotate((Math.random() - 0.5) * 0.8);
+    ctx.fillStyle = brushCols[Math.floor(Math.random() * brushCols.length)] + '44';
+    ctx.fillRect(-bw / 2, -bh / 2, bw, bh);
+    ctx.restore();
+  }
+  const g = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.75);
+  g.addColorStop(0, 'rgba(139,111,71,0.14)');
+  g.addColorStop(1, 'transparent');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.font = '700 ' + Math.floor(W * 0.42) + 'px "Cormorant Garamond",serif';
+  ctx.fillStyle = 'rgba(139,111,71,0.07)';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('IC', W / 2, H / 2);
+}
+
+/* ── Canvas: Gallery ── */
+function icmDrawGallery(id, hue, light) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.fillStyle = light ? '#c4baa8' : '#28271f';
+  ctx.fillRect(0, 0, W, H);
+  for (let i = 0; i < 6; i++) {
+    const gl = ctx.createLinearGradient(Math.random() * W, 0, Math.random() * W, H);
+    gl.addColorStop(0, `hsla(${hue + 15},${light?22:18}%,${light?68:28}%,0.4)`);
+    gl.addColorStop(1, `hsla(${hue - 15},${light?18:14}%,${light?50:18}%,0.15)`);
+    ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H);
+  }
+  for (let i = 0; i < 4; i++) {
+    ctx.beginPath();
+    ctx.strokeStyle = light ? 'rgba(0,0,0,0.04)' : 'rgba(255,255,255,0.04)';
+    ctx.lineWidth = 1 + Math.random() * 2.5;
+    ctx.moveTo(Math.random() * W, -20);
+    ctx.lineTo(Math.random() * W, H + 20);
+    ctx.stroke();
+  }
+}
+
+/* ── Form Submit ── */
+function icmInitForm() {
+  const form = document.getElementById('icm-offerte-form');
+  if (!form) return;
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('icm-submit-btn');
+    const success = document.getElementById('icm-form-success');
+    const error = document.getElementById('icm-form-error');
+    btn.textContent = 'Wird gesendet...';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    success.style.display = 'none';
+    error.style.display = 'none';
+    try {
+      const data = new FormData(form);
+      const response = await fetch('https://formspree.io/f/xzdokapq', {
+        method: 'POST', body: data, headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        success.style.display = 'block';
+        form.reset();
+        btn.textContent = '✓ Gesendet!';
+        btn.style.background = '#3B6D11';
+        btn.style.opacity = '1';
+      } else { throw new Error('Fehler'); }
+    } catch(err) {
+      error.style.display = 'block';
+      btn.textContent = 'Offerte anfragen →';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+  });
+}
+function icmFormSubmitOLD(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.icm-form-submit');
+  btn.textContent = '✓ Gesendet! Wir melden uns bald.';
+  btn.style.background = '#3B6D11';
+  btn.disabled = true;
+  /* Verbinden Sie hier Ihren Jimdo-Formularhandler oder mailto: */
+}
+
+/* ── Scroll Reveal ── */
+function icmInitReveal() {
+  const els = document.querySelectorAll('.icm-reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('icm-visible'); });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+}
+
+/* ── Smooth Scroll polyfill ── */
+function icmSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const id = this.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+}
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded', function() {
+  const heroCanvas = document.getElementById('icm-hero-canvas');
+  if (heroCanvas) icmDrawHero(heroCanvas);
+
+  const aboutCanvas = document.getElementById('icm-about-canvas');
+  if (aboutCanvas) setTimeout(() => icmDrawAbout(aboutCanvas), 50);
+
+  icmDrawGallery('icm-gal1', 35, true);
+  icmDrawGallery('icm-gal2', 215, false);
+  icmDrawGallery('icm-gal3', 25, true);
+  icmDrawGallery('icm-gal4', 175, false);
+  icmDrawGallery('icm-gal5', 48, true);
+
+  icmInitReveal();
+  icmInitForm();
+  icmSmoothScroll();
+
+  window.addEventListener('resize', function() {
+    if (heroCanvas) icmDrawHero(heroCanvas);
+    if (aboutCanvas) icmDrawAbout(aboutCanvas);
+  });
+});
+</script>
+
+</body>
+</html>
