@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – IC Malerei</title>
+<meta name="description" content="Impressum und rechtliche Angaben zu IC Malerei, Annika Imhof & Jorge Carraminana, Hinwil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:        #F5F2EC;
+  --warm-white:   #FAFAF7;
+  --charcoal:     #1C1C1A;
+  --mid:          #5C5B57;
+  --accent:       #8B6F47;
+  --accent-light: #D4B896;
+  --border:       rgba(92,91,87,0.15);
+  --border-strong:rgba(92,91,87,0.30);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.icm-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 4rem;
+  background: rgba(250,250,247,0.93);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+}
+.icm-logo {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--charcoal); text-decoration: none;
+}
+.icm-nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.icm-nav-links a {
+  font-size: 11.5px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mid); text-decoration: none; transition: color 0.2s;
+}
+.icm-nav-links a:hover { color: var(--charcoal); }
+.icm-nav-cta {
+  font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif; font-weight: 400;
+  color: var(--warm-white); background: var(--charcoal);
+  border: none; padding: 0.75rem 1.7rem; cursor: pointer; transition: background 0.25s;
+  text-decoration: none; display: inline-block;
+}
+.icm-nav-cta:hover { background: var(--accent); }
+
+/* PAGE LAYOUT */
+.icm-legal-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 9rem 2rem 7rem;
+}
+
+.icm-tag {
+  font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.icm-tag::before {
+  content: ''; display: block; width: 30px; height: 0.5px;
+  background: var(--accent); flex-shrink: 0;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300; line-height: 1.1; color: var(--charcoal);
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.5px solid var(--border);
+}
+h1 em { font-style: italic; color: var(--accent); }
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; color: var(--charcoal);
+  margin-top: 3rem; margin-bottom: 1rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--border);
+}
+
+h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+
+p { color: var(--mid); line-height: 1.9; margin-bottom: 1rem; font-size: 14.5px; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.icm-info-block {
+  background: var(--cream);
+  border-left: 2px solid var(--accent);
+  padding: 1.8rem 2rem;
+  margin: 2rem 0;
+}
+.icm-info-block p { margin: 0; color: var(--charcoal); }
+.icm-info-block p + p { margin-top: 0.4rem; }
+.icm-info-block strong {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--accent); display: block; margin-bottom: 0.8rem;
+}
+
+.icm-notice {
+  background: #EAF3DE; border-left: 2px solid #3B6D11;
+  padding: 1.2rem 1.6rem; margin: 2rem 0; font-size: 13px; color: #3B6D11;
+}
+
+/* FOOTER */
+.icm-kontakt-bar {
+  background: var(--charcoal); padding: 2.4rem 5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+}
+.icm-kontakt-row { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+.icm-kontakt-item {
+  display: flex; align-items: center; gap: 0.8rem;
+  font-size: 13px; color: rgba(250,250,247,0.65); text-decoration: none;
+}
+.icm-kontakt-item i { color: var(--accent-light); font-size: 16px; }
+.icm-footer {
+  background: #141412; padding: 2.8rem 5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem;
+}
+.icm-footer-links { display: flex; gap: 2rem; list-style: none; }
+.icm-footer-links a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.35); text-decoration: none; transition: color 0.2s; }
+.icm-footer-links a:hover { color: var(--accent-light); }
+.icm-footer-copy { font-size: 11px; color: rgba(250,250,247,0.28); }
+
+/* TAB SWITCH */
+.icm-tabs {
+  display: flex; gap: 0; margin-bottom: 3rem; border-bottom: 0.5px solid var(--border);
+}
+.icm-tab {
+  font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--mid); background: transparent;
+  border: none; padding: 1rem 2rem 1rem 0; cursor: pointer;
+  margin-right: 2rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s; margin-bottom: -0.5px;
+}
+.icm-tab.active { color: var(--charcoal); border-bottom-color: var(--accent); }
+.icm-tab:hover { color: var(--charcoal); }
+
+.icm-panel { display: none; }
+.icm-panel.active { display: block; }
+
+@media (max-width: 900px) {
+  .icm-nav { padding: 1.2rem 1.5rem; }
+  .icm-nav-links { display: none; }
+  .icm-legal-page { padding: 7rem 1.5rem 5rem; }
+  .icm-kontakt-bar { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .icm-footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="icm-nav">
+  <a class="icm-logo" href="index.html">
+    <img src="8084ee96-037d-4841-9f68-83f2c51d1750.jpg" alt="IC Malerei Logo" style="height:48px;width:auto;object-fit:contain;vertical-align:middle;">
+  </a>
+  <ul class="icm-nav-links">
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="index.html#offerte">Offerte</a></li>
+  </ul>
+  <a class="icm-nav-cta" href="index.html#offerte">Kostenlose Offerte</a>
+</nav>
+
+<div class="icm-legal-page">
+  <div class="icm-tag">Rechtliches</div>
+  <h1>Impressum &amp;<br><em>Datenschutz</em></h1>
+
+  <!-- TABS -->
+  <div class="icm-tabs">
+    <button class="icm-tab active" onclick="showTab('impressum', this)">Impressum</button>
+    <button class="icm-tab" onclick="showTab('datenschutz', this)">Datenschutz</button>
+  </div>
+
+  <!-- ═══ IMPRESSUM ═══ -->
+  <div class="icm-panel active" id="panel-impressum">
+
+    <h2>Angaben zur Unternehmung</h2>
+
+    <div class="icm-info-block">
+      <strong>Firmenbezeichnung</strong>
+      <p>IC Malerei Annika Imhof &amp; Jorge Carraminana</p>
+      <p>Kollektivgesellschaft</p>
+    </div>
+
+    <div class="icm-info-block">
+      <strong>Gesellschafter</strong>
+      <p>Annika Imhof</p>
+      <p>Jorge Carraminana</p>
+    </div>
+
+    <div class="icm-info-block">
+      <strong>Domizil / Hauptadresse</strong>
+      <p>Neueggstrasse 2</p>
+      <p>8340 Hinwil, Schweiz</p>
+    </div>
+
+    <div class="icm-info-block">
+      <strong>Postadresse</strong>
+      <p>Alte Zihlstrasse 1</p>
+      <p>8340 Hinwil, Schweiz</p>
+    </div>
+
+    <div class="icm-info-block">
+      <strong>Kontakt</strong>
+      <p>Telefon: <a href="tel:0799399188">079 939 91 88</a></p>
+      <p>E-Mail: <a href="mailto:info@icmalerei.ch">info@icmalerei.ch</a></p>
+      <p>Website: <a href="https://www.icmalerei.ch">www.icmalerei.ch</a></p>
+    </div>
+
+    <div class="icm-info-block">
+      <strong>Handelsregister</strong>
+      <p>Handelsregister des Kantons Zürich</p>
+      <p>UID: <strong style="font-size:inherit;letter-spacing:normal;text-transform:none;color:var(--charcoal);display:inline;">CHE-144.496.664</strong></p>
+    </div>
+
+    
+
+    <h2>Mehrwertsteuer</h2>
+    <p>IC Malerei ist im Schweizer Mehrwertsteuerregister eingetragen und steuerpflichtig. Die MWST-Nummer entspricht der UID-Nummer (CHE-144.496.664 MWST).</p>
+
+    <h2>Haftungsausschluss</h2>
+    <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernimmt IC Malerei keine Gewähr. Als Diensteanbieter sind wir für eigene Inhalte verantwortlich. Für Inhalte externer verlinkter Seiten übernehmen wir keine Haftung.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von IC Malerei.</p>
+
+    <h2>Streitbeilegung</h2>
+    <p>IC Malerei ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Bei Streitigkeiten gilt Schweizer Recht, Gerichtsstand ist Hinwil ZH.</p>
+
+  </div>
+
+  <!-- ═══ DATENSCHUTZ ═══ -->
+  <div class="icm-panel" id="panel-datenschutz">
+
+    <h2>Datenschutzerklärung</h2>
+    <p>IC Malerei nimmt den Schutz Ihrer persönlichen Daten ernst. Diese Datenschutzerklärung informiert Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie haben. Sie gilt für die Website <a href="https://www.icmalerei.ch">www.icmalerei.ch</a>.</p>
+    <p>Massgeblich ist das Schweizer Datenschutzgesetz (DSG) sowie, soweit anwendbar, die Europäische Datenschutz-Grundverordnung (DSGVO).</p>
+
+    <h2>Verantwortliche Stelle</h2>
+    <div class="icm-info-block">
+      <strong>Datenschutz-Verantwortlicher</strong>
+      <p>IC Malerei Annika Imhof &amp; Jorge Carraminana</p>
+      <p>Neueggstrasse 2, 8340 Hinwil</p>
+      <p>E-Mail: <a href="mailto:info@icmalerei.ch">info@icmalerei.ch</a></p>
+    </div>
+
+    <h2>Welche Daten wir erheben</h2>
+    <p><strong>Kontaktformular:</strong> Wenn Sie unser Kontaktformular ausfüllen, erheben wir Vorname, Nachname, E-Mail-Adresse, Telefonnummer (optional) und Ihre Nachricht. Diese Daten werden ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+    <p><strong>Server-Logs:</strong> Beim Besuch unserer Website werden automatisch technische Daten erfasst (IP-Adresse, Browsertyp, Besuchszeit). Diese werden ausschliesslich für technische Zwecke gespeichert und nach spätestens 30 Tagen gelöscht.</p>
+    <p><strong>Cookies:</strong> Diese Website verwendet keine Marketing- oder Tracking-Cookies. Es werden nur technisch notwendige Funktionen eingesetzt.</p>
+
+    <h2>Formspree (Kontaktformular)</h2>
+    <p>Das Kontaktformular auf unserer Website wird über den Dienst Formspree (Formspree Inc., USA) verarbeitet. Ihre Formulardaten werden an Formspree übertragen und von dort an unsere E-Mail-Adresse weitergeleitet. Formspree speichert Ihre Daten gemäss deren eigener Datenschutzerklärung unter <a href="https://formspree.io/legal/privacy-policy" target="_blank">formspree.io/legal/privacy-policy</a>.</p>
+
+    <h2>GitHub Pages (Hosting)</h2>
+    <p>Diese Website wird über GitHub Pages (GitHub Inc., USA) gehostet. Beim Aufruf der Website werden technische Daten (u.a. IP-Adresse) an GitHub übermittelt. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub unter <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">docs.github.com</a>.</p>
+
+    <h2>Google Fonts</h2>
+    <p>Diese Website verwendet Google Fonts (Google LLC, USA) zur Darstellung von Schriftarten. Beim Laden der Seite werden Schriftarten von Google-Servern geladen, wobei Ihre IP-Adresse an Google übermittelt wird. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+
+    <h2>Ihre Rechte</h2>
+    <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer gespeicherten Daten. Für Anfragen wenden Sie sich an: <a href="mailto:info@icmalerei.ch">info@icmalerei.ch</a>.</p>
+    <p>Sie haben das Recht, eine Beschwerde bei der zuständigen Datenschutzbehörde einzureichen. In der Schweiz ist dies der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB), <a href="https://www.edoeb.admin.ch" target="_blank">www.edoeb.admin.ch</a>.</p>
+
+    <h2>Datensicherheit</h2>
+    <p>Wir setzen technische und organisatorische Sicherheitsmassnahmen ein, um Ihre Daten gegen Manipulation, Verlust und unberechtigten Zugriff zu schützen. Die Übertragung dieser Website erfolgt verschlüsselt über HTTPS.</p>
+
+    <h2>Änderungen dieser Erklärung</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Die jeweils aktuelle Version ist auf dieser Seite abrufbar. Stand: Mai 2025.</p>
+
+  </div>
+</div>
+
+<!-- KONTAKT-BAR -->
+<div class="icm-kontakt-bar">
+  <div class="icm-kontakt-row">
+    <a class="icm-kontakt-item" href="tel:0799399188"><i class="ti ti-phone"></i>079 939 91 88</a>
+    <a class="icm-kontakt-item" href="mailto:info@icmalerei.ch"><i class="ti ti-mail"></i>info@icmalerei.ch</a>
+    <span class="icm-kontakt-item"><i class="ti ti-map-pin"></i>Hinwil, 8340 Zürich</span>
+  </div>
+  <a class="icm-nav-cta" href="index.html#offerte">Jetzt kontaktieren</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="icm-footer">
+  <div>
+    <img src="8084ee96-037d-4841-9f68-83f2c51d1750.jpg" alt="IC Malerei" style="height:40px;width:auto;filter:invert(1);opacity:0.85;">
+  </div>
+  <ul class="icm-footer-links">
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+  </ul>
+  <p class="icm-footer-copy">© 2025 IC Malerei – Annika Imhof & Jorge Carraminana</p>
+</footer>
+
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.icm-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.icm-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
