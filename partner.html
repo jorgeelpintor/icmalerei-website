@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner – IC Malerei</title>
+<meta name="description" content="Unsere Referenzpartner: KEZO Hinwil und DVZO Dampfbahn Zürcher Oberland. Professionelle Malerarbeiten für Industrie, Gewerbe und öffentliche Institutionen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:        #F5F2EC;
+  --warm-white:   #FAFAF7;
+  --charcoal:     #1C1C1A;
+  --mid:          #5C5B57;
+  --accent:       #8B6F47;
+  --accent-light: #D4B896;
+  --gold:         #B8953F;
+  --border:       rgba(92,91,87,0.15);
+  --border-strong:rgba(92,91,87,0.30);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+.icm-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 4rem;
+  background: rgba(250,250,247,0.93);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+}
+.icm-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; }
+.icm-nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.icm-nav-links a { font-size: 11.5px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+.icm-nav-links a:hover { color: var(--charcoal); }
+.icm-nav-links a.active { color: var(--charcoal); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+.icm-nav-cta { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--warm-white); background: var(--charcoal); border: none; padding: 0.75rem 1.7rem; cursor: pointer; transition: background 0.25s; text-decoration: none; display: inline-block; }
+.icm-nav-cta:hover { background: var(--accent); }
+
+/* ── PAGE HEADER ── */
+.icm-page-header {
+  padding: 9rem 5rem 6rem;
+  background: var(--charcoal);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+.icm-tag { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 2.4rem; display: flex; align-items: center; gap: 0.8rem; }
+.icm-tag::before { content: ''; display: block; width: 30px; height: 0.5px; background: var(--accent-light); flex-shrink: 0; }
+.icm-section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 300; line-height: 1.15; color: var(--warm-white); margin-bottom: 1.5rem; }
+.icm-section-title em { font-style: italic; color: var(--accent-light); }
+.icm-section-body { font-size: 15px; color: rgba(250,250,247,0.55); line-height: 1.9; max-width: 520px; }
+
+/* ── PARTNER CARDS ── */
+.icm-partner-section { padding: 7rem 5rem; background: var(--warm-white); }
+
+.icm-partner-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  border: 0.5px solid var(--border);
+  margin-bottom: 1.5px;
+  overflow: hidden;
+}
+.icm-partner-card:nth-child(even) .icm-partner-visual { order: 2; }
+.icm-partner-card:nth-child(even) .icm-partner-content { order: 1; }
+
+.icm-partner-visual {
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+.icm-partner-visual canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+.icm-partner-visual-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+}
+.icm-partner-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(28,28,26,0.55) 0%, rgba(28,28,26,0.2) 100%);
+}
+.icm-partner-logo-badge {
+  position: absolute; bottom: 2.5rem; left: 2.5rem;
+  background: rgba(250,250,247,0.95);
+  padding: 0.9rem 1.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--charcoal);
+}
+.icm-partner-logo-badge span { color: var(--accent); }
+.icm-partner-year {
+  position: absolute; top: 2rem; right: 2rem;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  border: 0.5px solid rgba(255,255,255,0.2);
+  padding: 0.4rem 0.9rem;
+}
+
+.icm-partner-content {
+  padding: 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--warm-white);
+}
+
+.icm-partner-tag {
+  font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.icm-partner-tag::before { content: ''; display: block; width: 24px; height: 0.5px; background: var(--accent); flex-shrink: 0; }
+
+.icm-partner-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 400; color: var(--charcoal);
+  line-height: 1.15; margin-bottom: 0.5rem;
+}
+.icm-partner-subtitle {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 2rem;
+}
+
+.icm-partner-desc {
+  font-size: 14.5px; color: var(--mid); line-height: 1.9; margin-bottom: 2rem;
+}
+
+/* Leistungs-Tags */
+.icm-leistungs-tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;
+}
+.icm-ltag {
+  font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--accent); background: var(--cream);
+  border: 0.5px solid rgba(139,111,71,0.25);
+  padding: 0.4rem 0.9rem;
+}
+
+/* Leistungs-Liste */
+.icm-partner-list {
+  list-style: none; display: flex; flex-direction: column; gap: 0.65rem;
+  border-top: 0.5px solid var(--border); padding-top: 2rem;
+}
+.icm-partner-list li {
+  font-size: 13.5px; color: var(--mid);
+  display: flex; align-items: flex-start; gap: 0.8rem; line-height: 1.6;
+}
+.icm-partner-list li::before {
+  content: ''; width: 18px; height: 0.5px;
+  background: var(--accent); flex-shrink: 0; margin-top: 0.7em;
+}
+
+/* Foto-Grid innerhalb Card */
+.icm-photo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+  background: var(--border);
+  position: absolute; inset: 0;
+}
+.icm-photo-grid-item {
+  overflow: hidden; position: relative;
+}
+.icm-photo-grid-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.icm-photo-grid-item:hover img { transform: scale(1.05); }
+.icm-photo-placeholder {
+  width: 100%; height: 100%;
+  background: var(--charcoal);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.8rem;
+}
+.icm-photo-placeholder i { font-size: 28px; color: rgba(255,255,255,0.15); }
+.icm-photo-placeholder span { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+
+/* ── ZAHLEN BAND ── */
+.icm-zahlen-band {
+  background: var(--cream); padding: 5rem;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+}
+.icm-zahl-item {
+  padding: 2rem 3rem;
+  border-right: 0.5px solid var(--border);
+  text-align: center;
+}
+.icm-zahl-item:last-child { border-right: none; }
+.icm-zahl-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--charcoal); line-height: 1; }
+.icm-zahl-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid); margin-top: 8px; }
+
+/* ── CTA ── */
+.icm-cta-band {
+  background: var(--charcoal); padding: 5rem;
+  display: flex; justify-content: space-between; align-items: center; gap: 3rem; flex-wrap: wrap;
+}
+.icm-cta-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; color: var(--warm-white); line-height: 1.2; }
+.icm-cta-text em { font-style: italic; color: var(--accent-light); }
+.icm-btn-primary { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 400; background: var(--accent); color: var(--warm-white); border: none; padding: 1.2rem 2.5rem; cursor: pointer; transition: background 0.25s; text-decoration: none; display: inline-block; }
+.icm-btn-primary:hover { background: var(--gold); }
+.icm-btn-ghost { font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 400; background: transparent; color: rgba(250,250,247,0.7); border: 0.5px solid rgba(250,250,247,0.2); padding: 1rem 2rem; cursor: pointer; transition: border-color 0.25s; text-decoration: none; display: inline-block; }
+.icm-btn-ghost:hover { border-color: rgba(250,250,247,0.6); color: var(--warm-white); }
+
+/* ── FOOTER ── */
+.icm-kontakt-bar { background: var(--charcoal); padding: 2.4rem 5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.07); }
+.icm-kontakt-row { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+.icm-kontakt-item { display: flex; align-items: center; gap: 0.8rem; font-size: 13px; color: rgba(250,250,247,0.65); text-decoration: none; }
+.icm-kontakt-item i { color: var(--accent-light); font-size: 16px; }
+.icm-footer { background: #141412; padding: 2.8rem 5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem; }
+.icm-footer-links { display: flex; gap: 2rem; list-style: none; }
+.icm-footer-links a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.35); text-decoration: none; transition: color 0.2s; }
+.icm-footer-links a:hover { color: var(--accent-light); }
+.icm-footer-copy { font-size: 11px; color: rgba(250,250,247,0.28); }
+
+/* ── REVEAL ── */
+.icm-reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.icm-reveal.icm-visible { opacity: 1; transform: none; }
+.icm-delay-1 { transition-delay: 0.1s; }
+.icm-delay-2 { transition-delay: 0.2s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .icm-nav { padding: 1.2rem 1.5rem; }
+  .icm-nav-links { display: none; }
+  .icm-page-header { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
+  .icm-partner-section { padding: 4rem 1.5rem; }
+  .icm-partner-card { grid-template-columns: 1fr; }
+  .icm-partner-card:nth-child(even) .icm-partner-visual { order: 0; }
+  .icm-partner-card:nth-child(even) .icm-partner-content { order: 1; }
+  .icm-partner-visual { min-height: 280px; }
+  .icm-partner-content { padding: 2.5rem 1.5rem; }
+  .icm-zahlen-band { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem; }
+  .icm-zahl-item { padding: 1.5rem; }
+  .icm-cta-band { padding: 3rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .icm-kontakt-bar { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .icm-footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1.5rem; }
+}
+
+/* ── VORHER/NACHHER SLIDER ── */
+.icm-vn-wrap {
+  position: absolute; inset: 0;
+  user-select: none; cursor: ew-resize;
+}
+.icm-vn-nach {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+}
+.icm-vn-vor-clip {
+  position: absolute; inset: 0;
+  width: 50%; overflow: hidden;
+}
+.icm-vn-vor-clip img {
+  position: absolute; top: 0; left: 0;
+  height: 100%; width: 200%;
+  max-width: none;
+  object-fit: cover; object-position: left center;
+}
+.icm-vn-line {
+  position: absolute; top: 0; bottom: 0;
+  left: 50%; width: 2px;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  transform: translateX(-50%);
+}
+.icm-vn-handle {
+  position: absolute; top: 50%;
+  left: 50%; transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  background: white; border-radius: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--charcoal);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  cursor: ew-resize;
+}
+.icm-vn-label {
+  position: absolute; top: 1.2rem;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: white; background: rgba(0,0,0,0.45);
+  padding: 0.35rem 0.8rem;
+}
+.icm-vn-label-l { left: 1rem; }
+.icm-vn-label-r { right: 1rem; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="icm-nav">
+  <a class="icm-logo" href="index.html">
+    <img src="8084ee96-037d-4841-9f68-83f2c51d1750.jpg" alt="IC Malerei Logo" style="height:48px;width:auto;object-fit:contain;vertical-align:middle;">
+  </a>
+  <ul class="icm-nav-links">
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="partner.html" class="active">Partner</a></li>
+    <li><a href="index.html#offerte">Offerte</a></li>
+  </ul>
+  <a class="icm-nav-cta" href="index.html#offerte">Kostenlose Offerte</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="icm-page-header">
+  <div class="icm-reveal">
+    <div class="icm-tag">Referenzen</div>
+    <h1 class="icm-section-title">Unsere<br><em>Partner</em></h1>
+  </div>
+  <div class="icm-reveal icm-delay-1">
+    <p class="icm-section-body">Von Industrieanlagen bis zur historischen Museumsbahn — wir sind stolz auf die Projekte, die wir mit unseren Partnern realisiert haben. Qualität, Verlässlichkeit und Präzision auf jeder Fläche.</p>
+  </div>
+</div>
+
+<!-- PARTNER SECTION -->
+<section class="icm-partner-section">
+
+  <!-- ═══ KEZO ═══ -->
+  <div class="icm-partner-card icm-reveal">
+
+    <div class="icm-partner-visual" style="position:relative;overflow:hidden;min-height:520px;">
+      <!-- Vorher/Nachher Slider KEZO -->
+      <div class="icm-vn-wrap" id="kezo-vn">
+        <img class="icm-vn-nach" src="trafostation_fertig_1.jpeg" alt="KEZO Trafostation fertig">
+        <div class="icm-vn-vor-clip" id="kezo-clip">
+          <img src="kezo_vorher_trafostation.jpeg" alt="KEZO Trafostation vorher">
+        </div>
+        <div class="icm-vn-line" id="kezo-line"></div>
+        <div class="icm-vn-handle" id="kezo-handle"><i class="ti ti-arrows-left-right"></i></div>
+        <div class="icm-vn-label icm-vn-label-l">Vorher</div>
+        <div class="icm-vn-label icm-vn-label-r">Nachher</div>
+      </div>
+      <!-- Weitere Fertig-Fotos als Mini-Galerie unten -->
+      <div style="position:absolute;bottom:0;left:0;right:0;display:flex;gap:1.5px;height:100px;z-index:5;">
+        <div style="flex:1;overflow:hidden;">
+          <img src="trafostation_fertig_2.jpeg" alt="Trafostation fertig Ansicht 2" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="flex:1;overflow:hidden;">
+          <img src="trafostation_fertig.jpeg" alt="Trafostation fertig Ansicht 3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+      </div>
+      <div class="icm-partner-logo-badge" style="z-index:10;bottom:7rem;"><span>KEZO</span> Hinwil</div>
+      <div class="icm-partner-year" style="z-index:10;">Projekt · Hinwil</div>
+    </div>
+
+    <div class="icm-partner-content">
+      <div class="icm-partner-tag">Industrie & Gewerbe</div>
+      <div class="icm-partner-name">KEZO<br>Kehrichtverwertung</div>
+      <div class="icm-partner-subtitle">Zweckverband Zürcher Oberland · Wildbachstr. 2, Hinwil</div>
+      <p class="icm-partner-desc">
+        Die KEZO betreibt in Hinwil seit 1963 eine der grössten Kehrichtverwertungsanlagen der Schweiz. Für diesen anspruchsvollen Industriekunden haben wir umfangreiche Malerarbeiten in verschiedenen Gebäudebereichen ausgeführt — von repräsentativen Büroräumen bis zu technischen Anlagen.
+      </p>
+      <div class="icm-leistungs-tags">
+        <span class="icm-ltag">Innenanstrich</span>
+        <span class="icm-ltag">Treppenhaus</span>
+        <span class="icm-ltag">Türen & Zargen</span>
+        <span class="icm-ltag">2K-Bodenbeschichtung</span>
+        <span class="icm-ltag">Trafostation</span>
+      </div>
+      <ul class="icm-partner-list">
+        <li>Sämtliche Büroräume — Wände, Decken, Türen &amp; Zargen, Fenster</li>
+        <li>Treppenhaus komplett inkl. Geländer und Fensterleibungen</li>
+        <li>Trafostation: Innenanstrich mit 2-Komponenten-Bodenbeschichtung</li>
+        <li>Industrietaugliche Materialien für langlebige Oberflächen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══ DVZO ═══ -->
+  <div class="icm-partner-card icm-reveal">
+
+    <div class="icm-partner-visual" style="position:relative;overflow:hidden;min-height:520px;">
+      <div class="icm-vn-wrap" id="dvzo-vn">
+        <img class="icm-vn-nach" src="andreaskreuz_neu.jpeg" alt="Andreaskreuz nach Renovation">
+        <div class="icm-vn-vor-clip" id="dvzo-clip">
+          <img src="andreaskreuz_alt.jpeg" alt="Andreaskreuz vor Renovation">
+        </div>
+        <div class="icm-vn-line" id="dvzo-line"></div>
+        <div class="icm-vn-handle" id="dvzo-handle"><i class="ti ti-arrows-left-right"></i></div>
+        <div class="icm-vn-label icm-vn-label-l">Vorher</div>
+        <div class="icm-vn-label icm-vn-label-r">Nachher</div>
+      </div>
+      <div class="icm-partner-logo-badge" style="z-index:10;"><span>DVZO</span> Dampfbahn</div>
+      <div class="icm-partner-year" style="z-index:10;">Projekt · Bauma–Hinwil</div>
+    </div>
+
+    <div class="icm-partner-content">
+      <div class="icm-partner-tag">Historisches Erbe</div>
+      <div class="icm-partner-name">DVZO<br>Dampfbahn Zürcher Oberland</div>
+      <div class="icm-partner-subtitle">Dampfbahn-Verein Zürcher Oberland · Strecke Bauma–Hinwil</div>
+      <p class="icm-partner-desc">
+        Der DVZO betreibt seit 1978 die historische Museumsbahn auf der Strecke Bauma–Bäretswil–Hinwil — eine der schönsten Bahnen der Schweiz. Wir waren stolz, einen Teil dieses kulturellen Erbes zu pflegen: die Renovation der Andreaskreuze entlang der gesamten Strecke.
+      </p>
+      <div class="icm-leistungs-tags">
+        <span class="icm-ltag">Andreaskreuze</span>
+        <span class="icm-ltag">Bahnübergänge</span>
+        <span class="icm-ltag">Renovation</span>
+        <span class="icm-ltag">Strecke Bauma–Hinwil</span>
+      </div>
+      <ul class="icm-partner-list">
+        <li>Renovation aller Andreaskreuze entlang der Museumsbahn-Strecke</li>
+        <li>Fachgerechter Anstrich der Bahnübergangs-Signale nach Norm</li>
+        <li>Strecke Bauma–Bäretswil–Hinwil, ca. 25 km</li>
+        <li>Wetterbeständige Schutzfarben für dauerhafte Haltbarkeit</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- ZAHLEN BAND -->
+<div class="icm-zahlen-band icm-reveal">
+  <div class="icm-zahl-item">
+    <div class="icm-zahl-num">2</div>
+    <div class="icm-zahl-label">Referenzpartner</div>
+  </div>
+  <div class="icm-zahl-item">
+    <div class="icm-zahl-num">~25</div>
+    <div class="icm-zahl-label">km Bahnstrecke</div>
+  </div>
+  <div class="icm-zahl-item">
+    <div class="icm-zahl-num">100%</div>
+    <div class="icm-zahl-label">Zufriedene Partner</div>
+  </div>
+  <div class="icm-zahl-item">
+    <div class="icm-zahl-num">∞</div>
+    <div class="icm-zahl-label">Weitere Projekte</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="icm-cta-band icm-reveal">
+  <div class="icm-cta-text">Auch Ihr Betrieb<br>verdient <em>beste Qualität</em></div>
+  <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+    <a class="icm-btn-primary" href="index.html#offerte">Kostenlose Offerte anfragen</a>
+    <a class="icm-btn-ghost" href="leistungen.html">Unsere Leistungen →</a>
+  </div>
+</div>
+
+<!-- KONTAKT-BAR -->
+<div class="icm-kontakt-bar">
+  <div class="icm-kontakt-row">
+    <a class="icm-kontakt-item" href="tel:0799399188"><i class="ti ti-phone"></i>079 939 91 88</a>
+    <a class="icm-kontakt-item" href="mailto:info@icmalerei.ch"><i class="ti ti-mail"></i>info@icmalerei.ch</a>
+    <span class="icm-kontakt-item"><i class="ti ti-map-pin"></i>Hinwil, 8340 Zürich</span>
+  </div>
+  <a class="icm-nav-cta" href="index.html#offerte">Jetzt kontaktieren</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="icm-footer">
+  <div><img src="8084ee96-037d-4841-9f68-83f2c51d1750.jpg" alt="IC Malerei" style="height:40px;width:auto;filter:invert(1);opacity:0.85;"></div>
+  <ul class="icm-footer-links">
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="impressum.html">Datenschutz</a></li>
+  </ul>
+  <p class="icm-footer-copy">© 2025 IC Malerei – Annika Imhof & Jorge Carraminana</p>
+</footer>
+
+<script>
+
+/* ── Vorher/Nachher Slider ── */
+function initVNSlider(wrapId, clipId, lineId, handleId) {
+  const wrap = document.getElementById(wrapId);
+  const clip = document.getElementById(clipId);
+  const line = document.getElementById(lineId);
+  const handle = document.getElementById(handleId);
+  if (!wrap) return;
+
+  function setPos(pct) {
+    pct = Math.max(5, Math.min(95, pct));
+    clip.style.width = pct + '%';
+    clip.querySelector('img').style.width = (10000/pct) + '%';
+    line.style.left = pct + '%';
+    handle.style.left = pct + '%';
+  }
+
+  function onMove(clientX) {
+    const rect = wrap.getBoundingClientRect();
+    const pct = ((clientX - rect.left) / rect.width) * 100;
+    setPos(pct);
+  }
+
+  let dragging = false;
+  wrap.addEventListener('mousedown', e => { dragging = true; onMove(e.clientX); });
+  window.addEventListener('mousemove', e => { if (dragging) onMove(e.clientX); });
+  window.addEventListener('mouseup', () => { dragging = false; });
+  wrap.addEventListener('touchstart', e => { dragging = true; onMove(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchmove', e => { if (dragging) onMove(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchend', () => { dragging = false; });
+  setPos(50);
+}
+
+function icmInitReveal() {
+  const els = document.querySelectorAll('.icm-reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('icm-visible'); });
+  }, { threshold: 0.08 });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('DOMContentLoaded', function() {
+  icmInitReveal();
+  initVNSlider('dvzo-vn', 'dvzo-clip', 'dvzo-line', 'dvzo-handle');
+  initVNSlider('kezo-vn', 'kezo-clip', 'kezo-line', 'kezo-handle');
+});
+</script>
+</body>
+</html>
